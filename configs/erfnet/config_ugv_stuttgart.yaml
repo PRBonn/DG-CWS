@@ -1,0 +1,86 @@
+seed: 1660662706
+experiment:
+  id: UAVBonn
+data:
+  name: UAVBonn
+  path_to_dataset: /export/data/janw/DGSS/dense/ugv-stuttgart
+  path_to_sparse_crop_dataset: /export/data/janw/DGSS/sparse/all_sparse_crops_extended
+  path_to_sparse_weed_dataset: /export/data/janw/DGSS/sparse/all_sparse_crops_extended
+  num_workers: 4
+  check_data_split: true
+  image_normalizer:
+    name: single_image_normalizer
+backbone:
+  name: erfnet
+  num_classes: 3
+  pretrained: false
+train:
+  step_settings:
+    - regular
+    - regular_global_style_transfer
+    - sparse
+  max_epoch: 4096
+  ckpt_every_n_epochs: 12
+  n_gpus: 1
+  benchmark: true
+  loss: xentropy
+  learning_rate: 1.0e-4
+  weight_decay: 2.0e-04
+  class_weights:
+    - 1.0
+    - 1.0
+    - 1.0
+  dataset_size: null
+  batch_size: 4
+  shuffle: true
+  vis_train_every_x_epochs: 1024
+  postprocess_train_every_x_epochs: 1024
+  geometric_data_augmentations:
+    random_crop:
+      height: 768
+      width: 768
+val:
+  step_settings:
+    - regular
+  n_gpus: 1
+  dataset_size: null
+  batch_size: 2
+  check_val_every_n_epoch: 512
+  vis_val_every_x_epochs: 512
+  postprocess_val_every_x_epochs: 1024
+  geometric_data_augmentations:
+    center_crop:
+      height: 896
+      width: 896
+test:
+  step_settings:
+    - regular
+  n_gpus: 1
+  dataset_size: null
+  batch_size: 1
+  geometric_data_augmentations:
+    center_crop:
+      height: 896
+      width: 896
+predict:
+  step_settings:
+    - regular
+  batch_size: 1
+  geometric_data_augmentations:
+    center_crop:
+      height: 896
+      width: 896
+visualizers:
+  input_image_visualizer: null
+  semantic_map_visualizer:
+    classes_to_colors: {0: [0, 0, 0], 1: [0, 255, 0], 2: [255, 0, 0]}
+  semantic_overlay_correct_incorrect_visualizer:
+    classes_to_colors: {0: [0, 0, 0], 1: [0, 255, 0], 2: [255, 0, 0]}
+  semantic_overlay_visualizer:
+    classes_to_colors: {0: [0, 0, 0], 1: [0, 255, 0], 2: [255, 0, 0]}
+  ground_truth_visualizer:
+    classes_to_colors: {0: [0, 0, 0], 1: [0, 255, 0], 2: [255, 0, 0]}
+postprocessors:
+  keep_logits_postprocessor: null
+  probablistic_softmax_postprocessor: null
+  keep_embeddings_postprocessor: null

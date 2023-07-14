@@ -1,0 +1,12 @@
+pytorch-lightning==1.6.2
+Pillow
+matplotlib
+scikit-image
+torchmetrics==0.8.1
+oyaml
+onnxruntime
+tifffile
+gitpython
+wget
+kornia==0.6.4
+oyaml
