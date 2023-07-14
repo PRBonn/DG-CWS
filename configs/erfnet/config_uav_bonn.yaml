@@ -3,9 +3,9 @@ experiment:
   id: UAVBonn
 data:
   name: UAVBonn
-  path_to_dataset: /export/data/janw/DGSS/dense/uav-bonn
-  path_to_sparse_crop_dataset: /export/data/janw/DGSS/sparse/all_sparse_crops_extended
-  path_to_sparse_weed_dataset: /export/data/janw/DGSS/sparse/all_sparse_crops_extended
+  path_to_dataset: <path>/uav-bonn
+  path_to_sparse_crop_dataset: <path>/all_sparse_crops_extended
+  path_to_sparse_weed_dataset: <path>/all_sparse_crops_extended
   num_workers: 4
   check_data_split: true
   image_normalizer:
