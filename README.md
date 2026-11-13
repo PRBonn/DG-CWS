@@ -1,5 +1,5 @@
 # DG-CWS
-*[Towards Domain Generalization in Crop and Weed Segmentation for Precision Farming Robots](https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/weyler2023ral.pdf)*
+*[Towards Domain Generalization in Crop and Weed Segmentation for Precision Farming Robots](https://www.ipb.uni-bonn.de/pdfs/weyler2023ral.pdf)*
 
 We present a novel approach to leverage unlabeled images captured from various
 agricultural fields to develop domain generalized CNNs that enables agricultural
@@ -35,11 +35,15 @@ python test.py --config ./configs/erfnet/config_uav_bonn.yaml --export_dir </pat
 Before you start the testing you need to specify the paths to the datasets in the corresponding configuration file.
 
 # Datasets
-- [UAV Bonn](https://uni-bonn.sciebo.de/s/4Nty4gOzTZMy7jj)
-- [UAV Zurich](https://uni-bonn.sciebo.de/s/C1oaCrzntP8ZwPz)
-- [UGV Stuttgart]() -> tba
-- [Sparse Crops](https://uni-bonn.sciebo.de/s/SvXTIrrlneHdwKN)
-- [Sparse Weeds](https://uni-bonn.sciebo.de/s/AJpsgMeWP07W4yY)
+
+Please download the respective parts using the links below, and modify the directories in the configuration files accordingly. Each zip file contains a folder 'images/rgb' with the RGB images, and `annotations` with the masks used by our dataloader located in `datasets\uav_bonn.py`. 
+
+- [UAV Bonn](https://www.ipb.uni-bonn.de/html/projects/weyler2023ral/uav-bonn.zip) (0.8 GB)
+- [UAV Zurich](https://www.ipb.uni-bonn.de/html/projects/weyler2023ral/uav-zurich.zip) (0.8 GB)
+- [Sparse Crops](https://www.ipb.uni-bonn.de/html/projects/weyler2023ral/sparse_crops.zip) (1.1 GB)
+- [Sparse Weeds](https://www.ipb.uni-bonn.de/html/projects/weyler2023ral/sparse_weeds.zip) (0.4 GB)
+
+(Please note: We cannot publish the UGV Stuttgart data used in the paper as our industrial partner Bosch has the intellectual property for this data.)
 
 # Pretrained Models
 - [ERFNet](http://ipb.uni-bonn.de/html/deeplearningmodels/weyler2023ral/erfnet/erfnet.ckpt)
@@ -47,3 +51,21 @@ Before you start the testing you need to specify the paths to the datasets in th
 
 # License
 This software is released under a creative commons license which allows for personal and research use only. For a commercial license please contact the authors. You can view a license summary [here](https://creativecommons.org/licenses/by-nc/4.0/).
+
+# Citation
+
+If you use the data or our code in your publications, please cite our work:
+
+```bibtex
+@article{weyler2023ral,
+    author = {J. Weyler and T. L\"abe and F. Magistri and J. Behley and C. Stachniss},
+    title = {{Towards Domain Generalization in Crop and Weed Segmentation for Precision Farming Robots}},
+    journal = {IEEE Robotics and Automation Letters (RA-L)},
+    volume = 8,
+    number = 6,
+    pages = {3310--3317},
+    issn = {2377-3766},
+    year = {2023},
+    doi = {10.1109/LRA.2023.3262417},
+}
+```
