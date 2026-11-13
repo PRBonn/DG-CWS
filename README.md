@@ -40,14 +40,14 @@ Please download the respective parts using the links below, and modify the direc
 
 - [UAV Bonn](https://www.ipb.uni-bonn.de/html/projects/weyler2023ral/uav-bonn.zip) (0.8 GB)
 - [UAV Zurich](https://www.ipb.uni-bonn.de/html/projects/weyler2023ral/uav-zurich.zip) (0.8 GB)
-- [Sparse Crops](https://www.ipb.uni-bonn.de/html/projects/weyler2023ral/sparse_crops.zip) (1.1 GB)
+- [Sparse Crops](https://www.ipb.uni-bonn.de/html/projects/weyler2023ral/sparse_crops.zip) (2.7 GB)
 - [Sparse Weeds](https://www.ipb.uni-bonn.de/html/projects/weyler2023ral/sparse_weeds.zip) (0.4 GB)
 
 (Please note: We cannot publish the UGV Stuttgart data used in the paper as our industrial partner Bosch has the intellectual property for this data.)
 
 # Pretrained Models
-- [ERFNet](http://ipb.uni-bonn.de/html/deeplearningmodels/weyler2023ral/erfnet/erfnet.ckpt)
-- [DeepLabV3+](http://ipb.uni-bonn.de/html/deeplearningmodels/weyler2023ral/deeplabv3plus/deeplab.ckpt)
+- [ERFNet](https://www.ipb.uni-bonn.de/html/deeplearningmodels/weyler2023ral/erfnet/erfnet.ckpt)
+- [DeepLabV3+](https://www.ipb.uni-bonn.de/html/deeplearningmodels/weyler2023ral/deeplabv3plus/deeplab.ckpt)
 
 # License
 This software is released under a creative commons license which allows for personal and research use only. For a commercial license please contact the authors. You can view a license summary [here](https://creativecommons.org/licenses/by-nc/4.0/).
